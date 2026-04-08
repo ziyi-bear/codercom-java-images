@@ -1,4 +1,5 @@
-FROM eclipse-temurin:21-jdk-noble
+ARG JAVA_VERSION=21
+FROM eclipse-temurin:${JAVA_VERSION}-jdk-noble
 
 RUN apt-get update -y && apt install -y docker.io sudo pipx
 
