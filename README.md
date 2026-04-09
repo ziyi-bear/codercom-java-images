@@ -3,6 +3,9 @@ This repository contains java images for use with Coder. but can choose jdk vers
 
 All of our base images are built for Ubuntu or Debian environments. For example, you can use images like `eclipse-temurin:21-jdk-noble` or `eclipse-temurin:17-jdk-noble`.
 
+## Image Source Code
+* https://github.com/ziyi-bear/codercom-java-images-eclipse-temurin
+
 ## Base Image
 The base image is using from https://hub.docker.com/_/eclipse-temurin/
 ![](https://raw.githubusercontent.com/docker-library/docs/cb27e17c8b50fddc58f1933d266a1a7686fea8ed/eclipse-temurin/logo.png)
