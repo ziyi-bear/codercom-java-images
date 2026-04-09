@@ -2,7 +2,7 @@ ARG JAVA_VERSION=21
 FROM eclipse-temurin:${JAVA_VERSION}-jdk-noble
 
 # The software-properties-common package has been removed from Debian 13 (Trixie), and it is unclear if it will be re-added in the future.
-RUN apt-get update -y && apt-get install -y gnupg wget nano apt-utils unzip bash-completion sudo lsb-release
+RUN apt-get update -y && apt-get install -y gnupg wget nano apt-utils unzip bash-completion sudo lsb-release curl
 RUN sudo mkdir -p /etc/bash_completion.d/
 
 RUN apt-get update -y && apt install -y docker.io sudo pipx
