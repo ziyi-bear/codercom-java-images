@@ -1,5 +1,5 @@
 ARG JAVA_VERSION=21
-FROM eclipse-temurin:${JAVA_VERSION}-jdk-noble
+FROM eclipse-temurin:${JAVA_VERSION}-jdk-debian13-dev
 
 # The software-properties-common package has been removed from Debian 13 (Trixie), and it is unclear if it will be re-added in the future.
 RUN apt-get update -y && apt-get install -y gnupg wget nano apt-utils unzip bash-completion sudo lsb-release curl apt-transport-https ca-certificates
