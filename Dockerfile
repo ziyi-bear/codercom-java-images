@@ -21,5 +21,7 @@ RUN useradd coder \
     --user-group && \
     echo "coder ALL=(ALL) NOPASSWD:ALL" >>/etc/sudoers.d/nopasswd
 
+RUN rm -rf /var/lib/apt/lists/*
+
 USER coder
 RUN pipx ensurepath # adds user's bin directory to PATH
