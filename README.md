@@ -18,6 +18,13 @@ if want latest, can pull from below
 * `docker pull ghcr.io/ziyi-bear/codercom-java-images-eclipse-temurin:main-21-jdk-noble`
 * `docker pull ghcr.io/ziyi-bear/codercom-java-images-eclipse-temurin:main-17-jdk-noble`
 
+## why don't use DHI image?
+because it will always show error below when running user coder
+```bash
+coder@2bb4c0973b7a:/$ sudo apt update
+sudo: unable to initialize PAM: Critical error - immediate abort
+```
+
 ## User Management
 
 We do not explicitly delete the default user (e.g., `ubuntu`) or user `1001` in these containers. This is because some base images do not contain user `1001` or a default user out of the box, which would cause user deletion commands to fail during the build process (e.g., `id: '1001': no such user`). Instead, we handle user permissions and creation dynamically to ensure compatibility across various JDK base images.
